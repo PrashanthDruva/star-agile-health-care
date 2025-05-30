@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: healthcare
-        image: prashanthdruva/docker_assignment2:latest
+        image: prashanthdruva/docker_healthcare:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8082
