@@ -1,4 +1,4 @@
-# Banking and Finance project
+# Health care project
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -10,17 +10,17 @@ spec:
   template:
     metadata:
       labels:
-        app: BankingFinance
+        app: healthcare
     spec:
       containers:
-      - name: financeme
+      - name: healthcare
         image: prashanthdruva/docker_assignment2:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8081
   selector:
     matchLabels:
-      app: BankingFinance
+      app: healthcare
 
 ---
 apiVersion: v1
@@ -32,7 +32,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: BankingFinance
+    app: healthcare
   ports:
     - protocol: TCP
       port: 8081
