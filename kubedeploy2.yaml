@@ -17,7 +17,7 @@ spec:
         image: prashanthdruva/docker_assignment2:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8081
+        - containerPort: 8082
   selector:
     matchLabels:
       app: healthcare
@@ -35,6 +35,6 @@ spec:
     app: healthcare
   ports:
     - protocol: TCP
-      port: 8081
-      targetPort: 8081
+      port: 8082
+      targetPort: 8082
       nodePort: 31038
